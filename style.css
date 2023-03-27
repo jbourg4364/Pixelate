@@ -15,3 +15,17 @@ body {
 }
 
 /* your CSS below! */
+
+td {
+  background-color: lightgray;
+  height: 50px;
+  width: 50px;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.skyblue {
+  background-color: skyblue;
+}
