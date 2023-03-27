@@ -13,20 +13,27 @@ function makeRow() {
 makeRow();
 makeRow();
 
+/* Button */
 const addRow = document.getElementById("add-row");
 addRow.addEventListener("click",makeRow);
 
 const tableData = document.createElement("td")
-
-tableData.className = "gold"
+// tableData.className = "gold";
+let chosenColor = "gold";
 
 function colorize(event) {
     const target = event.target;
-    if (target.className.length) {
-        target.className = " "
+    if (target.className === chosenColor) {
+        target.className = "";
     } else {
-        target.className = "gold"
+        target.className = chosenColor;
     }
 }
 
 table.addEventListener("click", colorize);
+
+const selectElem = document.getElementById("select");
+
+selectElem.addEventListener("change", function(event) {
+    chosenColor = (event.target);
+});
